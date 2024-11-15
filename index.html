@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Camisetas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background: black;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .main-menu {
+            background: white;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .main-menu ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .main-menu a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .filters {
+            width: 200px;
+            padding: 20px;
+            background: #fff;
+            border-right: 1px solid #eee;
+        }
+
+        .filters h3 {
+            margin-bottom: 10px;
+        }
+
+        .filters ul {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .filters li {
+            margin-bottom: 8px;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .color-circle {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            cursor: pointer;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            border: 1px solid #eee;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .product-card h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .product-card .price {
+            color: #666;
+            font-weight: bold;
+        }
+
+        .layout {
+            display: flex;
+        }
+
+        @media (max-width: 768px) {
+            .layout {
+                flex-direction: column;
+            }
+            .filters {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        Free shipping on all orders
+    </nav>
+
+    <div class="main-menu">
+        <ul>
+            <li><a href="#">Wall Art</a></li>
+            <li><a href="#">Home Decor</a></li>
+            <li><a href="#">T-Shirts</a></li>
+            <li><a href="#">Tech</a></li>
+            <li><a href="#">Stickers</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>T-Shirts</h1>
+            <select>
+                <option>Popular</option>
+                <option>Newest</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+            </select>
+        </div>
+
+        <div class="layout">
+            <aside class="filters">
+                <h3>Filter by</h3>
+                <ul>
+                    <li>Category</li>
+                    <li>Style</li>
+                    <li>Theme</li>
+                    <li>Color</li>
+                </ul>
+
+                <h3>Color</h3>
+                <div class="color-options">
+                    <div class="color-circle" style="background: #22AA22;"></div>
+                    <div class="color-circle" style="background: #2222AA;"></div>
+                    <div class="color-circle" style="background: #000000;"></div>
+                    <div class="color-circle" style="background: #666666;"></div>
+                    <div class="color-circle" style="background: #FF00FF;"></div>
+                    <div class="color-circle" style="background: #FFA500;"></div>
+                </div>
+            </aside>
+
+            <main class="products-grid">
+                <div class="product-card">
+                    <img src="/api/placeholder/250/300" alt="Camiseta con gato vaquero">
+                    <h3>Cowboy Cat T-Shirt</h3>
+                    <p class="price">$24.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/250/300" alt="Camiseta con planta">
+                    <h3>Plant Lover T-Shirt</h3>
+                    <p class="price">$24.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/250/300" alt="Camiseta con mariposas">
+                    <h3>Butterfly Pattern T-Shirt</h3>
+                    <p class="price">$24.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="/api/placeholder/250/300" alt="Camiseta con patrón colorido">
+                    <h3>Colorful Pattern T-Shirt</h3>
+                    <p class="price">$24.99</p>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
