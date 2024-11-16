@@ -38,22 +38,52 @@ nav .user-profile img {
 
 
 .main-menu {
-    background: white;
+    background: #333;
     padding: 15px 0;
-    border-bottom: 1px solid #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .main-menu ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .main-menu a {
     text-decoration: none;
-    color: #333;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
 }
+
+.main-menu a:hover {
+    color: #ff9800; /* Color de resalte */
+}
+
+.main-menu ul li {
+    position: relative;
+}
+
+.main-menu ul li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff9800;
+    transition: width 0.3s ease;
+}
+
+.main-menu ul li:hover::after {
+    width: 100%;
+}
+
 
 .container {
     max-width: 1400px;
