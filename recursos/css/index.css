@@ -99,38 +99,70 @@ nav .user-profile img {
 }
 
 .filters {
-    width: 200px;
+    background: #f8f9fa;
     padding: 20px;
-    background: #fff;
-    border-right: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.filters:hover {
+    transform: scale(1.02);
 }
 
 .filters h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 2px solid #ff9800;
+    padding-bottom: 5px;
+}
+
+.filter-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.filter-list li {
     margin-bottom: 10px;
 }
 
-.filters ul {
-    list-style: none;
-    margin-bottom: 20px;
+.filter-list a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
 }
 
-.filters li {
-    margin-bottom: 8px;
+.filter-list a:hover {
+    background: #ff9800;
+    color: white;
 }
 
 .color-options {
     display: flex;
-    gap: 5px;
     flex-wrap: wrap;
+    gap: 10px;
 }
 
 .color-circle {
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    border: 1px solid #ddd;
+    border: none;
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.color-circle:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 .products-grid {
     display: grid;
