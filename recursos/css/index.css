@@ -98,6 +98,48 @@ nav .user-profile img {
     margin-bottom: 20px;
 }
 
+.modern-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f8f9fa;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #ff9800;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modern-select:hover {
+    background-color: #ffe0b3;
+    border-color: #ff9800;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modern-select:focus {
+    background-color: #ffe0b3;
+    border-color: #ff9800;
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.5);
+}
+
+.modern-select option {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Custom arrow */
+.modern-select {
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center;
+    background-size: 16px;
+}
+
 .filters {
     background: #f8f9fa;
     padding: 20px;
